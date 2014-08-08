@@ -1,0 +1,71 @@
+.featherbox
+  position: fixed
+  right: 0
+  bottom: 0
+  margin: auto
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  background: #FFF
+  border-width: 1px
+  border-style: solid
+  padding: 3rem
+  display: none
+  z-index: 100
+  overflow: auto
+  min-height: 25rem
+  max-width: 60rem
+
+.featherbox-close
+  position: absolute
+  top: 1em
+  right: 1em
+  background: #000
+  color: #FFF
+  padding: .5em .6em
+  border-radius: 10em
+  cursor: pointer
+
+.feathermask
+  display: none
+  content: ""
+  z-index: 80
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(0, 0, 0, .9)
+
+.featherbox-loading .featherbox::before
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  background: #444
+  width: 18px
+  height: 18px
+  background-color: #333
+  border-radius: 100%
+  display: inline-block
+  animation: featherbox-loading 1.0s infinite ease-in-out
+
+@keyframes featherbox-loading
+  0%
+    transform: scale(0.0)
+  100%
+    transform: scale(1.0)
+    opacity: 0
+
+@media only screen and (max-height: 25em)
+  .featherbox
+    position: absolute
+    left: 0
+    top: 0
+    transform: inherit
+    background: #FFF
+    border-width: 0
+

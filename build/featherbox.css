@@ -1,0 +1,86 @@
+/* line 1, ../src/sass/featherbox.sass */
+.featherbox {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-width: 1px;
+  border-style: solid;
+  padding: 3rem;
+  display: none;
+  z-index: 100;
+  overflow: auto;
+  min-height: 25rem;
+  max-width: 60rem;
+}
+
+/* line 19, ../src/sass/featherbox.sass */
+.featherbox-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: black;
+  color: white;
+  padding: 0.5em 0.6em;
+  border-radius: 10em;
+  cursor: pointer;
+}
+
+/* line 29, ../src/sass/featherbox.sass */
+.feathermask {
+  display: none;
+  content: "";
+  z-index: 80;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* line 40, ../src/sass/featherbox.sass */
+.featherbox-loading .featherbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #444444;
+  width: 18px;
+  height: 18px;
+  background-color: #333333;
+  border-radius: 100%;
+  display: inline-block;
+  animation: featherbox-loading 1s infinite ease-in-out;
+}
+
+@keyframes featherbox-loading {
+  /* line 57, ../src/sass/featherbox.sass */
+  0% {
+    transform: scale(0);
+  }
+
+  /* line 59, ../src/sass/featherbox.sass */
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@media only screen and (max-height: 25em) {
+  /* line 64, ../src/sass/featherbox.sass */
+  .featherbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: inherit;
+    background: white;
+    border-width: 0;
+  }
+}
