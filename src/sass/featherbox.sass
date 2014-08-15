@@ -18,13 +18,19 @@
 
 .featherbox-close
   position: absolute
-  top: 1em
-  right: 1em
-  background: #000
-  color: #FFF
-  padding: .5em .6em
-  border-radius: 10em
+  font-size: 2rem
+  top: 10px
+  right: 10px
+  background: #FFF
+  color: #000
   cursor: pointer
+  border: 0
+  transition: color .7s
+  padding: 0
+  &:hover
+    color: #CCC
+  &:active
+    padding: 0
 
 .feathermask
   display: none

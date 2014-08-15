@@ -1,0 +1,14 @@
+{
+    "in": ["css/*"],
+    "out": "../build/featherbox.css",
+    "fallbacks": {
+        "autoprefixer": true,
+        "variables": true,
+        "rem": ["16px", {"replace": false}],
+        "pseudoElements": true,
+        "filters": { "oldIE": true }
+    },
+    "optimizers": {
+        "minifier": true
+    }
+}

@@ -4,7 +4,8 @@
  *
  * Distributed under terms of the MIT license.
  */
-require(['../../build/featherbox'], function(fb) {
+//require(['../../build/featherbox'], function(fb) {
+require(['../../src/js/featherbox'], function(fb) {
 
     // initialize plugin
     fb.init({ fadeDuration: 100, closeButtom: true, selector: '[data-featherbox]' });
