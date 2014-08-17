@@ -17,8 +17,14 @@
   min-height: 25rem;
   max-width: 60rem;
 }
+/* line 18, ../sass/featherbox.sass */
+.featherbox video,
+.featherbox img {
+  width: auto;
+  max-width: 100%;
+}
 
-/* line 19, ../sass/featherbox.sass */
+/* line 24, ../sass/featherbox.sass */
 .featherbox-close {
   position: absolute;
   font-size: 2rem;
@@ -30,17 +36,18 @@
   border: 0;
   transition: color 0.7s;
   padding: 0;
+  background: transparent;
 }
-/* line 30, ../sass/featherbox.sass */
+/* line 36, ../sass/featherbox.sass */
 .featherbox-close:hover {
   color: #cccccc;
 }
-/* line 32, ../sass/featherbox.sass */
+/* line 38, ../sass/featherbox.sass */
 .featherbox-close:active {
   padding: 0;
 }
 
-/* line 35, ../sass/featherbox.sass */
+/* line 41, ../sass/featherbox.sass */
 .feathermask {
   display: none;
   content: "";
@@ -53,7 +60,7 @@
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* line 46, ../sass/featherbox.sass */
+/* line 52, ../sass/featherbox.sass */
 .featherbox-loading .featherbox::before {
   content: "";
   position: absolute;
@@ -72,19 +79,19 @@
 }
 
 @keyframes featherbox-loading {
-  /* line 63, ../sass/featherbox.sass */
+  /* line 69, ../sass/featherbox.sass */
   0% {
     transform: scale(0);
   }
 
-  /* line 65, ../sass/featherbox.sass */
+  /* line 71, ../sass/featherbox.sass */
   100% {
     transform: scale(1);
     opacity: 0;
   }
 }
 @media only screen and (max-height: 25em) {
-  /* line 70, ../sass/featherbox.sass */
+  /* line 76, ../sass/featherbox.sass */
   .featherbox {
     position: absolute;
     left: 0;
@@ -93,4 +100,19 @@
     background: white;
     border-width: 0;
   }
+}
+/* Black theme */
+/* line 85, ../sass/featherbox.sass */
+.blacksoots.featherbox {
+  background: black;
+  color: white;
+}
+
+/* line 89, ../sass/featherbox.sass */
+.blacksoots .featherbox-close {
+  color: white;
+}
+/* line 91, ../sass/featherbox.sass */
+.blacksoots .featherbox-close:hover {
+  color: #555555;
 }

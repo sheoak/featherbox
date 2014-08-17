@@ -3,19 +3,20 @@
  * Copyright (C) 2014 sheoak <dev@sheoak.fr>
  * Distributed under terms of the MIT license.
  */
-/**
- * TODO: add some basic options
- * TODO: close btn
- */
 define(['jquery'], function() {
     "use strict";
     return {
         box: false,
         mask: false,
         config: {
+            // show / hide effect’s duration
             fadeDuration: 400,
+            // display close btn
             closeButton: true,
-            selector: '[data-featherbox]'
+            // event selector
+            selector: '[data-featherbox]',
+            // theme
+            classname: 'goose'
         },
         // creat callback to open featherbox with link
         // having [data-featherbox] attribute
@@ -36,23 +37,21 @@ define(['jquery'], function() {
             this.config = $.extend({}, this.config, config);
         },
         // creates box and open link with ajax
-        open: function(link) {
+        open: function(link, config) {
 
             var self = this,
                 href = link.attr('href'),
                 body = $('body');
 
-//                 var i = new Image();
-//                 i.src = self.;
-//                 i.onload = f;
-//                 this.appendChild(i);
+            // tmp config
+            config = $.extend({}, this.config, config);
 
             // generates box if needed
             if (this.box === false)
             {
-                this.box = $('<div>').addClass('featherbox')
-                                     .appendTo(body);
-
+                this.box = $('<div>')
+                    .addClass('featherbox ' + config.classname)
+                    .appendTo(body);
             }
 
             // creates mask layer if needed
@@ -76,7 +75,7 @@ define(['jquery'], function() {
                 body.removeClass('featherbox-loading');
                 self.box.html(data);
 
-                if (self.config.closeButton)
+                if (config.closeButton)
                 {
                     var btn = $('<button>').html("×")
                                            .attr('data-featherbox-close', "1")
