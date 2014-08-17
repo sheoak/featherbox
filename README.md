@@ -4,9 +4,11 @@ Featherbox is a very lightweight and responsive lightbox in HTML/CSS3/JS.
 It uses no image and only a simple CSS to position itself. The loader is made
 with CSS and can be replace by your own styles.
 
-Javascript is only use to create the box and show/hide it.
+Javascript is only used to create the box and show/hide it.
 Featherbox only works with content loaded with ajax, it’s not made to show
 images in a lightbox ; however your could use the same CSS to do so.
+
+I will probably implement images loading later
 
 
 # How it works
@@ -46,7 +48,8 @@ You can pass some configuration :
         fb.init({
             fadeDuration: 1000,     // fade duration for showing/hiding the box
             selector: '[data-box]', // selector for the observer
-            closeButton: false      // remove default close button
+            closeButton: false,     // remove default close button
+            theme: 'blacksoots'     // black theme
         });
     });
 
