@@ -16,15 +16,16 @@
   overflow: auto;
   min-height: 25rem;
   max-width: 60rem;
+  min-width: 31em;
 }
-/* line 18, ../sass/featherbox.sass */
+/* line 19, ../sass/featherbox.sass */
 .featherbox video,
 .featherbox img {
   width: auto;
   max-width: 100%;
 }
 
-/* line 24, ../sass/featherbox.sass */
+/* line 25, ../sass/featherbox.sass */
 .featherbox-close {
   position: absolute;
   font-size: 2rem;
@@ -38,16 +39,16 @@
   padding: 0;
   background: transparent;
 }
-/* line 36, ../sass/featherbox.sass */
+/* line 37, ../sass/featherbox.sass */
 .featherbox-close:hover {
   color: #cccccc;
 }
-/* line 38, ../sass/featherbox.sass */
+/* line 39, ../sass/featherbox.sass */
 .featherbox-close:active {
   padding: 0;
 }
 
-/* line 41, ../sass/featherbox.sass */
+/* line 42, ../sass/featherbox.sass */
 .feathermask {
   display: none;
   content: "";
@@ -60,7 +61,7 @@
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* line 52, ../sass/featherbox.sass */
+/* line 53, ../sass/featherbox.sass */
 .featherbox-loading .featherbox::before {
   content: "";
   position: absolute;
@@ -79,19 +80,19 @@
 }
 
 @keyframes featherbox-loading {
-  /* line 69, ../sass/featherbox.sass */
+  /* line 70, ../sass/featherbox.sass */
   0% {
     transform: scale(0);
   }
 
-  /* line 71, ../sass/featherbox.sass */
+  /* line 72, ../sass/featherbox.sass */
   100% {
     transform: scale(1);
     opacity: 0;
   }
 }
-@media only screen and (max-height: 25em) {
-  /* line 76, ../sass/featherbox.sass */
+@media only screen and (max-height: 25em), only screen and (max-width: 45em) {
+  /* line 77, ../sass/featherbox.sass */
   .featherbox {
     position: absolute;
     left: 0;
@@ -99,20 +100,21 @@
     transform: inherit;
     background: white;
     border-width: 0;
+    transform: inherit;
   }
 }
 /* Black theme */
-/* line 85, ../sass/featherbox.sass */
+/* line 88, ../sass/featherbox.sass */
 .blacksoots.featherbox {
   background: black;
   color: white;
 }
 
-/* line 89, ../sass/featherbox.sass */
+/* line 92, ../sass/featherbox.sass */
 .blacksoots .featherbox-close {
   color: white;
 }
-/* line 91, ../sass/featherbox.sass */
+/* line 94, ../sass/featherbox.sass */
 .blacksoots .featherbox-close:hover {
   color: #555555;
 }
