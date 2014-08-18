@@ -75,5 +75,5 @@ You might want to implement your own observer, and skip the init method:
     });
 
 
-The the example file for more details.
+Sea the example file for more details.
 
