@@ -93,6 +93,7 @@ define(['jquery'], function() {
             this.mask.fadeIn(this.config.fadeDuration);
         },
         hide: function() {
+            // TODO: use CSS transition, remove this
             this.box.fadeOut(this.config.fadeDuration);
             this.mask.fadeOut(this.config.fadeDuration);
             $('body').removeClass('featherbox-opened');
