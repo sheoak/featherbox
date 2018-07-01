@@ -1,6 +1,6 @@
 # Featherbox
 
-*This repository is not maintain and is deprecated.*
+**This repository is not maintained and is deprecated.**
 
 Featherbox is a very lightweight and responsive lightbox in HTML/CSS3/JS.
 It uses no image and only a simple CSS to position itself. The loader is made
